@@ -425,6 +425,11 @@ section {
     margin-bottom: 0;
 }
 
+.auto-height{
+    position: relative;
+    min-height: 100% !important;
+}
+
 /*--------------------------------------------------------------
 # Video
 --------------------------------------------------------------*/
@@ -479,4 +484,9 @@ section {
     .video {
         background-attachment: fixed;
     }
+}
+
+.view > img{
+    height: 50vh;
+    object-fit: initial;
 }
