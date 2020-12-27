@@ -494,7 +494,7 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    height: 50%;
+    height: 100%;
     pointer-events: none;
     box-sizing: border-box;
     object-fit: cover; 
@@ -508,5 +508,35 @@ section {
 @media (min-width: 1024px) {
     .video {
         background-attachment: fixed;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .video-foreground,
+    .video-background video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80%;
+        pointer-events: none;
+        box-sizing: border-box;
+        object-fit: cover; 
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .video-foreground,
+    .video-background video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60%;
+        pointer-events: none;
+        box-sizing: border-box;
+        object-fit: cover; 
     }
 }
