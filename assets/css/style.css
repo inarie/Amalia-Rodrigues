@@ -463,8 +463,6 @@ section {
     background-position: center center;
     background-size: cover;
     position: relative;
-    /* -webkit-filter: opacity(.4);
-    filter: opacity(.4); */
 }
   
 .video::before {
@@ -488,55 +486,26 @@ section {
     box-sizing: border-box; 
 }
 
-.video-foreground,
-.video-background video{
+.video-foreground, .video-background video{
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    width: 80%;
     height: 100%;
     pointer-events: none;
     box-sizing: border-box;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
 .video-foreground{
     padding-bottom: 56.25%;
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    position: initial;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
 }
 
 @media (min-width: 1024px) {
     .video {
         background-attachment: fixed;
-    }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    .video-foreground,
-    .video-background video{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 80%;
-        pointer-events: none;
-        box-sizing: border-box;
-        object-fit: cover; 
-    }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    .video-foreground,
-    .video-background video{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 60%;
-        pointer-events: none;
-        box-sizing: border-box;
-        object-fit: cover; 
     }
 }
