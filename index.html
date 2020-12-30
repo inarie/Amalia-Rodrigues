@@ -23,6 +23,17 @@
 
         <!-- Main CSS File -->
         <link href="assets/css/style.css" rel="stylesheet">
+
+        <!-- Needed because of the timeline :/ -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script>
+            // Timeline
+            $(function(){
+    			$().timelinr({
+    				arrowKeys: 'false'
+    			})
+    		});
+        </script>
     </head>
     <body>
         <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
@@ -32,8 +43,8 @@
                 <ul>
                     <li class="active"><a href="#hero"><i class="bx bx-home"></i> <span>Início</span></a></li>
                     <li><a href="#about"><i class="bx bx-user"></i> <span>Biografia</span></a></li>
-                    <!-- <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-                    <li><a href="#portfolio"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+                    <li><a href="#awards"><i class='bx bx-award'></i> <span>Prémios e Reconhecimentos</span></a></li>
+                    <!-- <li><a href="#portfolio"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
                     <li><a href="#services"><i class="bx bx-server"></i> <span>Services</span></a></li>
                     <li><a href="#contact"><i class="bx bx-envelope"></i> <span>Contact</span></a></li> -->
                 </ul>
@@ -61,10 +72,10 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-4">
-                            <div id="carousel-example-2" class="carousel slide carousel-fade z-depth-1-half auto-height" data-ride="carousel">
+                            <div id="carousel-example-1" class="carousel slide carousel-fade z-depth-1-half auto-height" data-ride="carousel">
                               <ol class="carousel-indicators">
-                                <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
-                                <li data-target="#carousel-example-2" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-1" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-1" data-slide-to="1"></li>
                               </ol>
                               <div class="carousel-inner" role="listbox">
                                 <div class="carousel-item active">
@@ -107,7 +118,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div id="video" class="video">
                     <div class="video-background">
                         <div class="video-foreground">
@@ -117,7 +127,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="container" data-aos="fade-up" style="padding-top: 30px;">
                     <div class="row">
                         <div class="col-lg-12 pt-4 pt-lg-0 content">
@@ -141,7 +150,137 @@
                         </div>
                     </div>
                 </div>
-            
+                <div class="container" data-aos="fade-up" style="padding-top: 30px;">
+                    <div class="row">
+                        <div class="col-lg-6 pt-4 pt-lg-0 content">
+                            <h3>Amália &amp; Legado</h3>
+                            <p>Amália faleceu no dia 6 de outubro de 1999 e o seu enterro foi realizado no Cemitério dos Prazeres. Os seus restos mortais foram transferidos para o Panteão Nacional no dia 8 de julho de 2001, onde descansa junto dos maiores "heróis" que Portugal viu nascer e crescer. O país chorou a sua morte física, sentindo uma grande saudade e dor, mas até o dia de hoje os seus admiradores, os Amalianos, sabem que ela vive através da sua música e das pessoas que transmitem o seu legado.</p>
+                            <p>No seu testamento, Amália declarou que queria que fosse criada uma fundação a seu nome. A Fundação Amália Rodrigues foi oficialmente inaugurada no dia 10 de dezembro de 1999. Desde o ano 2005, a fundação realiza anualmente uma gala para atribuir prémios como: Carreira Feminina, Carreira Masculina, Revelação Feminina, Revelação Masculina, Internacional, Música Étnica, Viola, Viola Baixo, Guitarra Portuguesa, Intérprete Feminina, Intérprete Masculino, Registro Discográfico, Poeta de Fado, Compositor de Fado, Música Sinfónica, Fado Amador e Ensaio e Divulgação.</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <div id="carousel-example-2" class="carousel slide carousel-fade z-depth-1-half auto-height" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-example-2" data-slide-to="1"></li>
+                                </ol>
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="carousel-item active">
+                                        <img class="d-block img-fluid" src="assets/img/tumulo_amalia.jpeg" alt="First slide" style="-webkit-filter: grayscale(100%); filter: grayscale(100%);">
+                                        <div class="carousel-caption">
+                                            <h3 class="h3-responsive" style="color: white;">Túmulo</h3>
+                                            <p style="text-align: center;">Amália Rodrigues</p>
+                                        </div>
+                                    </div>
+                                  <div class="carousel-item">
+                                      <img class="d-block img-fluid" src="assets/img/Casa_Museu_Amalia_Rodrigues.jpg" alt="Second slide" style="-webkit-filter: grayscale(100%); filter: grayscale(100%);">
+                                      <div class="carousel-caption">
+                                          <h3 class="h3-responsive" style="color: white;">Fundação</h3>
+                                          <p style="text-align: center;">Amália Rodrigues</p>
+                                      </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="awards" style="padding-bottom: 0;">
+                <div class="container" data-aos="fade-up">
+                    <div class="section-title">
+                      <h2>Prémios e Reconhecimentos</h2>
+                      <p>Amália Rodrigues foi merecedora de reconhecimentos e prémios de grande importância, com isto, honra tanto nacionalmente como internacionalmente. De seguida, apresenta-se uma lista cronológica dos mesmos:</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12" id="timeline">
+                            <ul id="dates">
+                                <li><a href="#1948">1948</a></li>
+                                <li><a href="#1958">1958</a></li>
+                                <li><a href="#1959">1959</a></li>
+                                <li><a href="#1965">1965</a></li>
+                                <li><a href="#1966">1966</a></li>
+                                <li><a href="#1967">1967</a></li>
+                                <li><a href="#1968">1968</a></li>
+                                <li><a href="#1969">1969</a></li>
+                                <li><a href="#1970">1970</a></li>
+                                <li><a href="#1971">1971</a></li>
+                                <li><a href="#1980">1980</a></li>
+                                <li><a href="#1985">1985</a></li>
+                                <li><a href="#1986">1986</a></li>
+                                <li><a href="#1990">1990</a></li>
+                            </ul>
+                            <ul id="issues">
+                                <li id="1984">
+                                    <h1>1948</h1>
+                                    <p>Devido a sua participação no filme “Fado, História de uma Cantadeira”, Amália recebe o Prémio SNI para a Melhor Atriz do Ano</p>
+                                </li>
+                                <li id="1958">
+                                    <h1>1958</h1>
+                                    <p>Recebe o Grau de Cavaleiro da Ordem de Santiago de Espada</p>
+                                </li>
+                                <li id="1959">
+                                    <h1>1959</h1>
+                                    <p>Amália é reconhecida com a Grande Medalha de Prata da Cidade de Paris</p>
+                                </li>
+                                <li id="1965">
+                                    <h1>1965</h1>
+                                    <p>Pelos filmes “Fado Corrido” e “As Ilhas Encantadas”, Amália recebe novamente o Prémio SNI para a Melhor Atriz do Ano</p>
+                                </li>
+                                <li id="1966">
+                                    <h1>1966</h1>
+                                    <p>Foi-lhe outorgado dois Prémios Pozal Domingues para o EP “Fandangueiro” e para o EP “Vou dar de beber à dor"</p>
+                                </li>
+                                <li id="1967">
+                                    <h1>1967</h1>
+                                    <p>Amália recebeu o Prémio M.I.D.E.M. pelo record de vendas no mercado discográfico português no período 1965-1966. Recebe o prémio Larousse, na categoria de “Melhor Artista do Music Hall” do ano</p>
+                                </li>
+                                <li id="1968">
+                                    <h1>1968</h1>
+                                    <p>Amália recebeu o Prémio M.I.D.E.M. pelo record de vendas no mercado discográfico português no período 1966-1967</p>
+                                </li>
+                                <li id="1969">
+                                    <h1>1969</h1>
+                                    <p>Amália recebeu o Prémio M.I.D.E.M. pelo record de vendas no mercado discográfico português no período 1967-1968</p>
+                                </li>
+                                <li id="1970">
+                                    <h1>1970</h1>
+                                    <p>Amália é reconhecida com o Grau de Oficial da Ordem Militar da Ordem Militar de Santiago de Espada</p>
+                                </li>
+                                <li id="1971">
+                                    <h1>1971</h1>
+                                    <p>Recebeu uma alta condecoração no Líbano, sendo a primeira pessoa do lado ocidental do mundo condecorada pelo mundo árabe</p>
+                                </li>
+                                <li id="1980">
+                                    <h1>1980</h1>
+                                    <p>No dia 7 de julho recebe a Medalha de Ouro da Cidade de Lisboa no Teatro São Luís. Amália também recebe o Grau de Grande Oficial da Ordem do Infante D. Henrique</p>
+                                </li>
+                                <li id="1985">
+                                    <h1>1985</h1>
+                                    <p>Foi-lhe outorgado o Grau de Comendador da Ordem das Artes e Letras</p>
+                                </li>
+                                <li id="1986">
+                                    <h1>1986</h1>
+                                    <p>Recebe a Medalha de Ouro da Cidade do Porto</p>
+                                </li>
+                                <li id="1990">
+                                    <h1>1990</h1>
+                                    <p>Amália é condecorada com a Grã Cruz da Ordem de Santiago de Espada. É premiada com o Prémio de World Music Awards. Recebe a medalha de Jerusalém</p>
+                                </li>
+                            </ul>
+                            <a href="#" id="next"><img class="d-block img-fluid" src="assets/img/right-arrow.png"></a>
+                            <a href="#" id="prev"><img class="d-block img-fluid" src="assets/img/left-arrow.png"></a>
+                        </div>
+                    </div>
+                  </div>
+            </section>
+
+            <section id="awards">
+                <div class="container" data-aos="fade-up">
+                    <div class="section-title">
+                      <h2>Prémios e Reconhecimentos</h2>
+                      <p>Amália Rodrigues foi merecedora de reconhecimentos e prémios de grande importância, com isto, honra tanto nacionalmente como internacionalmente. De seguida, apresenta-se uma lista cronológica dos mesmos:</p>
+                    </div>
+                </div>
             </section>
 
         </main>
@@ -158,5 +297,6 @@
 
         <!-- Main JS File -->
         <script src="assets/js/main.js"></script>
+        <script src="assets/js/timeline.js"></script>
     </body>
 </html>
