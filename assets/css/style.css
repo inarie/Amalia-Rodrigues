@@ -95,8 +95,8 @@ h1, h2, h3, h4, h5, h6 {
     top: calc(50% - 30px);
     left: calc(50% - 30px);
     border: 6px solid #0563bb;
-    border-top-color: #fff;
-    border-bottom-color: #fff;
+    border-top-color: rgb(24, 26, 27);
+    border-bottom-color: rgb(24, 26, 27);
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -433,6 +433,14 @@ section {
     min-height: 100% !important;
 }
 
+#carousel-example-1 .carousel-item img{
+    height: 100% !important;
+    max-height: 400px !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #carousel-example-2 .carousel-item img{
     height: 100% !important;
     max-height: 440px !important;
@@ -450,22 +458,14 @@ section {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     #carousel-example-1 .carousel-item img{
-        height: 100% !important;
         max-height: 420px !important;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     #carousel-example-1 .carousel-item img{
-        height: 100% !important;
         max-height: 400px !important;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
