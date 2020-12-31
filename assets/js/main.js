@@ -121,4 +121,40 @@
           backSpeed: 30
       });
   }
+
+  //For the video timeline
+  $(".tl-item").mouseenter(function() {
+    $(this).find("video").get(0).play();
+  });
+
+  $(".tl-item").mouseleave(function() {
+    $(this).find("video").get(0).pause();
+    $(this).find("video").get(0).currentTime = 0;
+  });
+
+  $.js = function (el) {
+    return $('[data-js=' + el + ']')
+  };
+  
+  carousel();
 })(jQuery);
+
+function carousel() {
+$.js('timeline-carousel').slick({
+  infinite: false,
+  arrows: false,
+  dots: true,
+  autoplay: false,
+  speed: 1100,
+  slidesToShow: 2,
+  slidesToScroll: 2,
+  responsive: [
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }]
+});
+}
