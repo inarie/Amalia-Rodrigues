@@ -442,8 +442,9 @@ section {
 }
 
 #carousel-example-2 .carousel-item img{
-    height: 100% !important;
-    max-height: 440px !important;
+    width: auto;
+    max-height: 440px;
+    height: 440px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -862,11 +863,11 @@ section {
     transition: opacity 0.5s ease, transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
-.tl-item:hover:after {
+.tl-item.hover:after {
     opacity: 0;
 }
 
-.tl-item:hover:before {
+.tl-item.hover:before {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0) translateY(0);
             transform: translate3d(0, 0, 0) translateY(0);
@@ -876,7 +877,7 @@ section {
     transition: opacity 1s ease, transform 1s ease 0.25s, -webkit-transform 1s ease 0.25s;
 }
 
-.tl-item:hover .tl-content {
+.tl-item.hover .tl-content {
     opacity: 1;
     -webkit-transform: translateY(0);
             transform: translateY(0);
@@ -884,7 +885,7 @@ section {
     transition: all 0.75s ease 0.5s;
 }
 
-.tl-item:hover .tl-bg {
+.tl-item.hover .tl-bg {
     -webkit-filter: grayscale(0);
             filter: grayscale(0);
 }
@@ -923,6 +924,18 @@ section {
     font-family: 'Pathway Gothic One',Helvetica Neue,Helvetica,Arial,sans-serif;
     font-size: 1.728rem;
     margin-bottom: 0 !important;
+}
+
+@media(max-width: 768px) {
+    .tl-content.long {
+        top: 25%;
+    }
+    
+    .tl-year.long {
+        top: 20%;
+        -webkit-transform: translateX(-50%) translateY(-80%);
+                transform: translateX(-50%) translateY(-80%);
+    }
 }
 
 .tl-bg {

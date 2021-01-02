@@ -1,6 +1,12 @@
 !(function($) {
   "use strict";
 
+  let isMobile = false;
+  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+    // true for mobile device
+    isMobile = true;
+  }
+
   // Preloader
   $(window).on('load', function() {
     if ($('#preloader').length) {
@@ -112,31 +118,69 @@
 
   /*--/ Start Typed /--*/
   if ($('.text-slider').length == 1) {
-      var typed_strings = $('.text-slider-items').text();
-      var typed = new Typed('.text-slider', {
-          strings: typed_strings.split(','),
-          typeSpeed: 80,
-          loop: true,
-          backDelay: 1100,
-          backSpeed: 30
-      });
+    var typed_strings = $('.text-slider-items').text();
+    var typed = new Typed('.text-slider', {
+        strings: typed_strings.split(','),
+        typeSpeed: 80,
+        loop: true,
+        backDelay: 1100,
+        backSpeed: 30
+    });
   }
-
-  //For the video timeline
-  $(".tl-item").mouseenter(function() {
-    $(this).find("video").get(0).play();
-  });
-
-  $(".tl-item").mouseleave(function() {
-    $(this).find("video").get(0).pause();
-    $(this).find("video").get(0).currentTime = 0;
-  });
 
   $.js = function (el) {
     return $('[data-js=' + el + ']')
   };
   
   carousel();
+
+  const timelineItemEnter = (item) => {
+    item.addClass('hover');
+    item.find("video").get(0).play();
+  };
+
+  const timelineItemLeave = (item) => {
+    item.removeClass('hover');
+    item.find("video").get(0).pause();
+    item.find("video").get(0).currentTime = 0;
+  };
+
+  if (!isMobile) {
+    //For the video timeline
+    $(".tl-item").mouseenter((e) => {
+      timelineItemEnter($(e.target));
+    });
+
+    $(".tl-item").mouseleave((e) => {
+      timelineItemLeave($(e.target));
+    });
+  } else {
+    const items = $(".slick-slide").toArray();
+    let currentItem = $(items[0]);
+    timelineItemEnter(currentItem.find('.tl-item'));
+
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === "class") {
+          const target = $(mutation.target);
+          const attributeValue = target.prop(mutation.attributeName);
+          if (attributeValue.includes('slick-current') && target[0].id !== currentItem[0].id) {
+            // Simulate hover out on the old timeline item
+            timelineItemLeave(currentItem.find('.tl-item'));
+            // Simulate hover in on the new item
+            timelineItemEnter(target.find('.tl-item'));
+            currentItem = target;
+          }
+        }
+      });
+    });
+
+    items.forEach((item) => {
+      observer.observe(item, {
+        attributes: true
+      });
+    });
+  }
 })(jQuery);
 
 function carousel() {
