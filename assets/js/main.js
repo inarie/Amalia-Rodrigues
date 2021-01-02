@@ -181,6 +181,63 @@
       });
     });
   }
+
+  $("#checkbox").change(function() {
+    if(this.checked) {
+      $('#music').css('display', 'none');
+      $('#representation').css('display', 'block');
+    } else {
+      $('#representation').css('display', 'none');
+      $('#music').css('display', 'block');
+    }
+  });
+
+  // Init AOS
+  function aos_init() {
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  }
+
+  // Isotope and filter
+  $(window).on('load', function() {
+    var portfolioIsotope = $('.portfolio-container').isotope({
+      itemSelector: '.portfolio-item'
+    });
+
+    $('#portfolio-flters li').on('click', function() {
+      $("#portfolio-flters li").removeClass('filter-active');
+      $(this).addClass('filter-active');
+
+      portfolioIsotope.isotope({
+        filter: $(this).data('filter')
+      });
+      aos_init();
+    });
+
+    var portfolioIsotope2 = $('.portfolio-container-2').isotope({
+      itemSelector: '.portfolio-item-2'
+    });
+
+    $('#portfolio-flters-2 li').on('click', function() {
+      $("#portfolio-flters-2 li").removeClass('filter-active');
+      $(this).addClass('filter-active');
+
+      portfolioIsotope2.isotope({
+        filter: $(this).data('filter')
+      });
+      aos_init();
+    });
+
+    // Initiate venobox (lightbox feature used in portofilo)
+    $('.venobox').venobox({
+      'share': false
+    });
+
+    // Initiate aos_init() function
+    aos_init();
+  });
 })(jQuery);
 
 function carousel() {
