@@ -182,14 +182,23 @@
     });
   }
 
-  $("#checkbox").change(function() {
-    if(this.checked) {
-      $('#music').css('display', 'none');
-      $('#representation').css('display', 'block');
-    } else {
-      $('#representation').css('display', 'none');
-      $('#music').css('display', 'block');
+  Promise.all([$.get('representation.html'), $.get('music.html')]).then((data) => {
+    const representation = data[0];
+    const music = data[1];
+
+    const onCheckboxChanged = (checked) => {
+      if(checked) {
+        $('#visible-content').html(representation);
+      } else {
+        $('#visible-content').html(music)
+      }
     }
+
+    onCheckboxChanged($("#checkbox")[0].checked);
+
+    $("#checkbox").change((e) => {
+      onCheckboxChanged(e.target.checked);
+    });
   });
 
   // Init AOS

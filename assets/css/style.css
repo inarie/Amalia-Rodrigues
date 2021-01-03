@@ -438,8 +438,9 @@ section {
 }
 
 #carousel-example-1 .carousel-item img{
-    height: 100% !important;
-    max-height: 400px !important;
+    width: auto;
+    max-height: 440px;
+    height: 440px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -463,14 +464,14 @@ section {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     #carousel-example-1 .carousel-item img{
-        max-height: 420px !important;
+        max-height: 420px;
     }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     #carousel-example-1 .carousel-item img{
-        max-height: 400px !important;
+        max-height: 400px;
     }
 }
 
@@ -1703,7 +1704,6 @@ iframe {
     font-style: italic;
     padding: 0;
     margin: 0 0 40px 0;
-    color: rgb(181, 175, 166) !important;
 }
 
 #footer .copyright {
