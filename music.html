@@ -660,3 +660,23 @@
     </div>
   </div>
 </div>
+
+<script src="https://unpkg.com/imagesloaded@latest/imagesloaded.pkgd.min.js"></script>
+
+<script>
+   var $container = $('.portfolio-container');
+    $container.imagesLoaded( function() {
+      $container.isotope({
+          itemSelector: '.portfolio-item'
+      });
+
+      $('#portfolio-flters li').on('click', function() {
+        $("#portfolio-flters li").removeClass('filter-active');
+        $(this).addClass('filter-active');
+
+        $container.isotope({
+          filter: $(this).data('filter')
+        });
+      });
+    });
+</script>
